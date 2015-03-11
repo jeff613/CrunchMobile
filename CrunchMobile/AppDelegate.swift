@@ -15,6 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        SampleStartup()
+        return true
+    }
+    
+    func SampleStartup(){
+        var storyBoard = UIStoryboard(name: "SampleSB", bundle: nil)
+        
+        var mainVC = storyBoard.instantiateViewControllerWithIdentifier("mainVC") as MainViewController
+        
+        self.window?.rootViewController = UINavigationController(rootViewController: mainVC)
+        
+    }
+    
+    func JeffLogic(){
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
@@ -23,8 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let naviController = UINavigationController(rootViewController: companyTableView)
         window?.rootViewController = naviController
         window?.makeKeyAndVisible()
-        
-        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {

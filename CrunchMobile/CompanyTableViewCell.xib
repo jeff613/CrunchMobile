@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,16 +13,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIX-Jq-esf">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter-icon" translatesAutoresizingMaskIntoConstraints="NO" id="cIX-Jq-esf">
                         <rect key="frame" x="8" y="8" width="64" height="67"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="67" id="8uR-eo-CYj"/>
+                            <constraint firstAttribute="width" constant="64" id="Sm2-vY-isR"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8d-CC-iZT">
-                        <rect key="frame" x="87" y="8" width="238" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8d-CC-iZT">
+                        <rect key="frame" x="87" y="8" width="238" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="e8d-CC-iZT" firstAttribute="leading" secondItem="cIX-Jq-esf" secondAttribute="trailing" constant="15" id="Qkd-ID-ZpP"/>
+                    <constraint firstAttribute="trailing" secondItem="e8d-CC-iZT" secondAttribute="trailing" constant="8" id="hTn-GA-jT7"/>
+                    <constraint firstItem="e8d-CC-iZT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="j8Q-6E-ssi"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="e8d-CC-iZT" secondAttribute="bottom" constant="8" id="jZe-k3-3mi"/>
+                    <constraint firstItem="cIX-Jq-esf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="uLD-Cf-gkg"/>
+                    <constraint firstItem="cIX-Jq-esf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ymw-5V-PgC"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="companyImageView" destination="cIX-Jq-esf" id="JAN-dg-shJ"/>
@@ -31,4 +43,7 @@
             <point key="canvasLocation" x="359.5" y="350.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="twitter-icon" width="128" height="128"/>
+    </resources>
 </document>
