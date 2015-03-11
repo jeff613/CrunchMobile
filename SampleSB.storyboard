@@ -91,7 +91,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="116 Acquisitions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqT-hh-hEv">
-                                                            <rect key="frame" x="175" y="8" width="129" height="21"/>
+                                                            <rect key="frame" x="168" y="8" width="136" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="Gbq-zP-FjA"/>
                                                             </constraints>
@@ -170,7 +170,7 @@
                                                         <constraint firstItem="n3f-fn-Lvv" firstAttribute="top" secondItem="jFQ-gS-F6U" secondAttribute="top" constant="8" id="kEA-mi-Zcd"/>
                                                         <constraint firstItem="BC6-ez-RNI" firstAttribute="top" secondItem="n3f-fn-Lvv" secondAttribute="bottom" id="lhR-UL-ZXK"/>
                                                         <constraint firstItem="gIO-yW-Dwp" firstAttribute="top" secondItem="QML-xN-5fE" secondAttribute="bottom" constant="2.5" id="oWh-0w-HVI"/>
-                                                        <constraint firstItem="zqT-hh-hEv" firstAttribute="leading" secondItem="n3f-fn-Lvv" secondAttribute="trailing" constant="9" id="tYW-Ga-B7k"/>
+                                                        <constraint firstItem="zqT-hh-hEv" firstAttribute="leading" secondItem="n3f-fn-Lvv" secondAttribute="trailing" constant="2" id="tYW-Ga-B7k"/>
                                                         <constraint firstItem="n0C-Eg-apZ" firstAttribute="top" secondItem="jFQ-gS-F6U" secondAttribute="top" constant="8" id="ujX-I4-Qxa"/>
                                                         <constraint firstItem="gIO-yW-Dwp" firstAttribute="centerY" secondItem="8Yk-CS-pGF" secondAttribute="centerY" id="wfa-Xk-ppf"/>
                                                     </constraints>
@@ -193,6 +193,7 @@
                                             <outlet property="ipoInfo" destination="QML-xN-5fE" id="k4Q-lw-utt"/>
                                             <outlet property="profileImage" destination="n0C-Eg-apZ" id="2av-i8-vU0"/>
                                             <outlet property="webLabel" destination="hCm-7Y-l6W" id="Qbc-fM-wb8"/>
+                                            <segue destination="KQq-eQ-Fvt" kind="push" id="dWp-Xq-ENG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -215,7 +216,164 @@
             </objects>
             <point key="canvasLocation" x="268" y="361"/>
         </scene>
+        <!--Twitter-->
+        <scene sceneID="Rzo-4Y-6Em">
+            <objects>
+                <viewController id="KQq-eQ-Fvt" customClass="DetailsViewController" customModule="CrunchMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Zj-3o-kDW"/>
+                        <viewControllerLayoutGuide type="bottom" id="2tv-St-rC9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CA2-gH-tX7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="twitter-icon" translatesAutoresizingMaskIntoConstraints="NO" id="4A7-Wg-JXx">
+                                <rect key="frame" x="16" y="72" width="68" height="68"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6I-ry-XC9">
+                                <rect key="frame" x="92" y="72" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="116 Acquisitions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHN-QZ-7Em">
+                                <rect key="frame" x="92" y="119" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isD-eN-JUb">
+                                <rect key="frame" x="0.0" y="148" width="320" height="4"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4a4-p3-lkw">
+                                <rect key="frame" x="0.0" y="212" width="320" height="4"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ao4-my-5FB">
+                                <rect key="frame" x="0.0" y="282" width="320" height="4"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Founded on: 01/01/1994" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9e-LN-VO0">
+                                <rect key="frame" x="92" y="95" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Twitter is social network company." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgo-DX-Uok">
+                                <rect key="frame" x="16" y="160" width="288" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" fixedFrame="YES" text="Categories:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sqI-x3-fAR">
+                                <rect key="frame" x="15" y="224" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technology, Social, News" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3e-RI-a4z">
+                                <rect key="frame" x="16" y="242" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fx4-Jc-BtW">
+                                <rect key="frame" x="214" y="294" width="90" height="133"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CFO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcS-ZK-ivl">
+                                <rect key="frame" x="224" y="406" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woman139" translatesAutoresizingMaskIntoConstraints="NO" id="wff-sa-EJa">
+                                <rect key="frame" x="223" y="304" width="74" height="100"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uf3-bB-abX">
+                                <rect key="frame" x="16" y="294" width="90" height="133"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woman139" translatesAutoresizingMaskIntoConstraints="NO" id="J8e-yt-g2g">
+                                        <rect key="frame" x="7" y="8" width="74" height="100"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CEO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRN-xx-0na">
+                                        <rect key="frame" x="8" y="112" width="73" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L7I-0l-WQX">
+                                <rect key="frame" x="213" y="435" width="90" height="133"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CPO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-oI-1EP">
+                                <rect key="frame" x="223" y="546" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="male80" translatesAutoresizingMaskIntoConstraints="NO" id="uMx-BC-veN">
+                                <rect key="frame" x="222" y="445" width="74" height="100"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rTp-Dz-OSm">
+                                <rect key="frame" x="114" y="435" width="90" height="133"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CMO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oc-vq-IVf">
+                                <rect key="frame" x="124" y="546" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woman139" translatesAutoresizingMaskIntoConstraints="NO" id="mFK-vi-K83">
+                                <rect key="frame" x="123" y="445" width="74" height="100"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06X-MI-DFM">
+                                <rect key="frame" x="15" y="435" width="90" height="133"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8M-gt-CPk">
+                                <rect key="frame" x="25" y="546" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="male80" translatesAutoresizingMaskIntoConstraints="NO" id="HBJ-XV-ZsX">
+                                <rect key="frame" x="24" y="445" width="74" height="100"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksW-lc-Xbl">
+                                <rect key="frame" x="115" y="294" width="90" height="133"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SVP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ib-xO-NlM">
+                                <rect key="frame" x="125" y="406" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="male80" translatesAutoresizingMaskIntoConstraints="NO" id="umq-Ik-Z8P">
+                                <rect key="frame" x="124" y="304" width="74" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Twitter" id="QfH-jJ-oDc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfY-wJ-DNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="358"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="male80" width="64" height="64"/>
+        <image name="twitter-icon" width="128" height="128"/>
+        <image name="woman139" width="64" height="64"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

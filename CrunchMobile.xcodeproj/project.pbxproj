@@ -13,6 +13,7 @@
 		89E068451AAFFF99008F79BE /* InsiderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E068441AAFFF99008F79BE /* InsiderTableViewCell.swift */; };
 		89E068471AB0009F008F79BE /* CompanyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E068461AB0009F008F79BE /* CompanyData.swift */; };
 		89E068491AB00139008F79BE /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E068481AB00139008F79BE /* MockData.swift */; };
+		89E0684E1AB015D7008F79BE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0684D1AB015D7008F79BE /* DetailsViewController.swift */; };
 		DF4FE0721AAED82B00B730D1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FE0711AAED82B00B730D1 /* Company.swift */; };
 		DFA61DBB1AAEC15300EC202F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA61DBA1AAEC15300EC202F /* AppDelegate.swift */; };
 		DFA61DC21AAEC15300EC202F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA61DC11AAEC15300EC202F /* Images.xcassets */; };
@@ -45,6 +46,7 @@
 		89E068461AB0009F008F79BE /* CompanyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyData.swift; sourceTree = "<group>"; };
 		89E068481AB00139008F79BE /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		89E0684A1AB0047D008F79BE /* CrunchMobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrunchMobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		89E0684D1AB015D7008F79BE /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A68A0653222046F540C479CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DF4FE0711AAED82B00B730D1 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		DFA61DB51AAEC15300EC202F /* CrunchMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrunchMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			children = (
 				89E068421AAFCF12008F79BE /* MainViewController.swift */,
 				89E068441AAFFF99008F79BE /* InsiderTableViewCell.swift */,
+				89E0684D1AB015D7008F79BE /* DetailsViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				89E068471AB0009F008F79BE /* CompanyData.swift in Sources */,
 				DF4FE0721AAED82B00B730D1 /* Company.swift in Sources */,
 				DFA61DEC1AAECFB100EC202F /* CompanyDetailViewController.swift in Sources */,
+				89E0684E1AB015D7008F79BE /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
