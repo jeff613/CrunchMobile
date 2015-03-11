@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
-        <!--The Insider :)-->
+        <!--Main View Controller-->
         <scene sceneID="Uvz-Uj-EsN">
             <objects>
                 <viewController storyboardIdentifier="mainVC" id="crr-Ry-wp8" customClass="MainViewController" customModule="CrunchMobile" customModuleProvider="target" sceneMemberID="viewController">
@@ -206,7 +206,15 @@
                             <constraint firstAttribute="trailing" secondItem="rDB-cs-tRQ" secondAttribute="trailing" id="zzE-rc-RZ9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="The Insider :)" id="ph8-Yb-QMb"/>
+                    <navigationItem key="navigationItem" id="ph8-Yb-QMb">
+                        <nil key="title"/>
+                        <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="center" minimumFontSize="17" id="jPV-47-BSi">
+                            <rect key="frame" x="12" y="7" width="296" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="rDB-cs-tRQ" id="vZ7-GV-U2H"/>
@@ -214,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udw-l6-cdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="361"/>
+            <point key="canvasLocation" x="284" y="365"/>
         </scene>
         <!--Twitter-->
         <scene sceneID="Rzo-4Y-6Em">
