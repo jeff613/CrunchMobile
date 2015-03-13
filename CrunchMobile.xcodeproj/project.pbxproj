@@ -15,6 +15,8 @@
 		89E068491AB00139008F79BE /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E068481AB00139008F79BE /* MockData.swift */; };
 		89E0684E1AB015D7008F79BE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E0684D1AB015D7008F79BE /* DetailsViewController.swift */; };
 		DF4FE0721AAED82B00B730D1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FE0711AAED82B00B730D1 /* Company.swift */; };
+		DF4FE0751AB2BB9800B730D1 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4FE0731AB2BB9800B730D1 /* down.png */; };
+		DF4FE0761AB2BB9800B730D1 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4FE0741AB2BB9800B730D1 /* up.png */; };
 		DFA61DBB1AAEC15300EC202F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA61DBA1AAEC15300EC202F /* AppDelegate.swift */; };
 		DFA61DC21AAEC15300EC202F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA61DC11AAEC15300EC202F /* Images.xcassets */; };
 		DFA61DC51AAEC15300EC202F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA61DC31AAEC15300EC202F /* LaunchScreen.xib */; };
@@ -49,6 +51,8 @@
 		89E0684D1AB015D7008F79BE /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A68A0653222046F540C479CA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DF4FE0711AAED82B00B730D1 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		DF4FE0731AB2BB9800B730D1 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
+		DF4FE0741AB2BB9800B730D1 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
 		DFA61DB51AAEC15300EC202F /* CrunchMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrunchMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA61DB91AAEC15300EC202F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFA61DBA1AAEC15300EC202F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 		DFA61DB81AAEC15300EC202F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF4FE0731AB2BB9800B730D1 /* down.png */,
+				DF4FE0741AB2BB9800B730D1 /* up.png */,
 				DFA61DB91AAEC15300EC202F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -319,9 +325,11 @@
 			files = (
 				DFA61DC51AAEC15300EC202F /* LaunchScreen.xib in Resources */,
 				DFA61DE91AAECCCB00EC202F /* CompanyTableViewController.xib in Resources */,
+				DF4FE0751AB2BB9800B730D1 /* down.png in Resources */,
 				DFA61DE31AAEC3A000EC202F /* CompanyTableViewCell.xib in Resources */,
 				DFA61DED1AAECFB100EC202F /* CompanyDetailViewController.xib in Resources */,
 				DFA61DC21AAEC15300EC202F /* Images.xcassets in Resources */,
+				DF4FE0761AB2BB9800B730D1 /* up.png in Resources */,
 				89E068411AAFCE90008F79BE /* SampleSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +512,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CrunchMobile-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -517,6 +526,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CrunchMobile-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

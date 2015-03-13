@@ -11,17 +11,14 @@ import UIKit
 class CompanyDetailViewController: UIViewController {
     
     
-    @IBOutlet weak var companyNameLabel: UILabel!
-    
-    @IBOutlet weak var companyImageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var company: Company?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        companyNameLabel.text = company?.name
-        // Do any additional setup after loading the view.
+        scrollView.contentSize = CGSizeMake(375, 1200)
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,12 +10,20 @@ import UIKit
 
 class CompanyTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var companyNameLabel: UILabel!
-    @IBOutlet weak var companyImageView: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var companyLoc: UILabel!
+    @IBOutlet weak var ipoInfo: UILabel!
+    @IBOutlet weak var founders: UILabel!
+    @IBOutlet weak var acuisitions: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var catLabel: UILabel!
+    @IBOutlet weak var webLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.profileImage.layer.cornerRadius = 5
+        self.profileImage.clipsToBounds = true
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -24,4 +32,18 @@ class CompanyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
+    func setupCell(company: CompanyData){
+        self.profileImage.setImageWithURL(NSURL(string: company.profileImage!))
+        self.companyLoc.text = company.companyLoc
+        self.ipoInfo.text = company.ipoInfo
+        self.founders.text = company.founders
+        self.acuisitions.text = company.acuisitions
+        self.desc.text = company.desc
+        self.catLabel.text = company.catLabel
+        self.webLabel.text = company.webLabel
+    }
 }

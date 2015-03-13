@@ -9,7 +9,9 @@
 import UIKit
 
 class CompanyTableViewController: UITableViewController {
-        
+    
+    var data = [CompanyData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +22,8 @@ class CompanyTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         self.tableView.registerNib(UINib(nibName: "CompanyTableViewCell", bundle: nil), forCellReuseIdentifier: "CompanyCell")
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        
+        data = MockData.CompanyMockData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,15 +42,19 @@ class CompanyTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 10
+        return data.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("CompanyCell", forIndexPath: indexPath) as CompanyTableViewCell
         
-        cell.companyNameLabel.text = "company \(indexPath.row)"
+        cell.setupCell(data[indexPath.row])
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     /*
@@ -97,8 +104,8 @@ class CompanyTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailsView = CompanyDetailViewController(nibName: "CompanyDetailViewController", bundle: nil)
-        let company = Company(name: "Company \(indexPath.row)")
-        detailsView.company = company
+        //let company = Company(name: "Company \(indexPath.row)")
+        //detailsView.company = company
         self.navigationController?.pushViewController(detailsView, animated: true)
     }
     

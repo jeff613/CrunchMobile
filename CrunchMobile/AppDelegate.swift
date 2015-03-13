@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        SampleStartup()
+        JeffLogic()
         return true
     }
     
@@ -35,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let companyTableView = CompanyTableViewController(nibName: "CompanyTableViewController", bundle: nil)
         let naviController = UINavigationController(rootViewController: companyTableView)
+        naviController.navigationBar.topItem?.title = "The Insider"
         window?.rootViewController = naviController
         window?.makeKeyAndVisible()
     }
