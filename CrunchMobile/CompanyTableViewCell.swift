@@ -18,12 +18,14 @@ class CompanyTableViewCell: UITableViewCell {
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var catLabel: UILabel!
     @IBOutlet weak var webLabel: UILabel!
+    @IBOutlet weak var cardView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.profileImage.layer.cornerRadius = 5
         self.profileImage.clipsToBounds = true
-
+        self.cardView.layer.cornerRadius = 5
+        self.selectionStyle = UITableViewCellSelectionStyle.None
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

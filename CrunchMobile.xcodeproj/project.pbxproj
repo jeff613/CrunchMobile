@@ -17,6 +17,10 @@
 		DF4FE0721AAED82B00B730D1 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FE0711AAED82B00B730D1 /* Company.swift */; };
 		DF4FE0751AB2BB9800B730D1 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4FE0731AB2BB9800B730D1 /* down.png */; };
 		DF4FE0761AB2BB9800B730D1 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4FE0741AB2BB9800B730D1 /* up.png */; };
+		DF4FE0791AB633A200B730D1 /* CompanyGossipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4FE0771AB633A200B730D1 /* CompanyGossipViewController.swift */; };
+		DF4FE07A1AB633A200B730D1 /* CompanyGossipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4FE0781AB633A200B730D1 /* CompanyGossipViewController.xib */; };
+		DF4FE07C1AB6425000B730D1 /* twitter-icon-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DF4FE07B1AB6425000B730D1 /* twitter-icon-2.jpg */; };
+		DF4FE07E1AB6435D00B730D1 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = DF4FE07D1AB6435D00B730D1 /* star.png */; };
 		DFA61DBB1AAEC15300EC202F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA61DBA1AAEC15300EC202F /* AppDelegate.swift */; };
 		DFA61DC21AAEC15300EC202F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA61DC11AAEC15300EC202F /* Images.xcassets */; };
 		DFA61DC51AAEC15300EC202F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA61DC31AAEC15300EC202F /* LaunchScreen.xib */; };
@@ -53,6 +57,10 @@
 		DF4FE0711AAED82B00B730D1 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		DF4FE0731AB2BB9800B730D1 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		DF4FE0741AB2BB9800B730D1 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		DF4FE0771AB633A200B730D1 /* CompanyGossipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyGossipViewController.swift; sourceTree = "<group>"; };
+		DF4FE0781AB633A200B730D1 /* CompanyGossipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompanyGossipViewController.xib; sourceTree = "<group>"; };
+		DF4FE07B1AB6425000B730D1 /* twitter-icon-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "twitter-icon-2.jpg"; sourceTree = "<group>"; };
+		DF4FE07D1AB6435D00B730D1 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		DFA61DB51AAEC15300EC202F /* CrunchMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrunchMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA61DB91AAEC15300EC202F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFA61DBA1AAEC15300EC202F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +205,8 @@
 		DFA61DB81AAEC15300EC202F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF4FE07D1AB6435D00B730D1 /* star.png */,
+				DF4FE07B1AB6425000B730D1 /* twitter-icon-2.jpg */,
 				DF4FE0731AB2BB9800B730D1 /* down.png */,
 				DF4FE0741AB2BB9800B730D1 /* up.png */,
 				DFA61DB91AAEC15300EC202F /* Info.plist */,
@@ -228,6 +238,8 @@
 				DFA61DE71AAECCCB00EC202F /* CompanyTableViewController.xib */,
 				DFA61DEA1AAECFB100EC202F /* CompanyDetailViewController.swift */,
 				DFA61DEB1AAECFB100EC202F /* CompanyDetailViewController.xib */,
+				DF4FE0771AB633A200B730D1 /* CompanyGossipViewController.swift */,
+				DF4FE0781AB633A200B730D1 /* CompanyGossipViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -327,10 +339,13 @@
 				DFA61DE91AAECCCB00EC202F /* CompanyTableViewController.xib in Resources */,
 				DF4FE0751AB2BB9800B730D1 /* down.png in Resources */,
 				DFA61DE31AAEC3A000EC202F /* CompanyTableViewCell.xib in Resources */,
+				DF4FE07A1AB633A200B730D1 /* CompanyGossipViewController.xib in Resources */,
 				DFA61DED1AAECFB100EC202F /* CompanyDetailViewController.xib in Resources */,
 				DFA61DC21AAEC15300EC202F /* Images.xcassets in Resources */,
 				DF4FE0761AB2BB9800B730D1 /* up.png in Resources */,
 				89E068411AAFCE90008F79BE /* SampleSB.storyboard in Resources */,
+				DF4FE07E1AB6435D00B730D1 /* star.png in Resources */,
+				DF4FE07C1AB6425000B730D1 /* twitter-icon-2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +401,7 @@
 				DFA61DBB1AAEC15300EC202F /* AppDelegate.swift in Sources */,
 				DFA61DE81AAECCCB00EC202F /* CompanyTableViewController.swift in Sources */,
 				89E068491AB00139008F79BE /* MockData.swift in Sources */,
+				DF4FE0791AB633A200B730D1 /* CompanyGossipViewController.swift in Sources */,
 				89E068431AAFCF12008F79BE /* MainViewController.swift in Sources */,
 				89E068471AB0009F008F79BE /* CompanyData.swift in Sources */,
 				DF4FE0721AAED82B00B730D1 /* Company.swift in Sources */,

@@ -21,6 +21,8 @@ class CompanyTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        self.tableView.contentInset = UIEdgeInsets(top: 4, left: 0, bottom: 0, right: 0)
+        
         self.tableView.registerNib(UINib(nibName: "CompanyTableViewCell", bundle: nil), forCellReuseIdentifier: "CompanyCell")
         
         data = MockData.CompanyMockData()
@@ -104,9 +106,17 @@ class CompanyTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailsView = CompanyDetailViewController(nibName: "CompanyDetailViewController", bundle: nil)
+        let gossipView = CompanyGossipViewController(nibName: "CompanyGossipViewController", bundle: nil)
+        
+        let tabView = UITabBarController()
+        tabView.viewControllers = [gossipView, detailsView]
+        gossipView.tabBarItem = UITabBarItem(title: "Gossip", image: nil, tag: 0)
+        detailsView.tabBarItem = UITabBarItem(title: "Info", image: nil, tag: 1)
+        tabView.tabBar.barTintColor = barColor
+        tabView.tabBar.tintColor = barTextColor
         //let company = Company(name: "Company \(indexPath.row)")
         //detailsView.company = company
-        self.navigationController?.pushViewController(detailsView, animated: true)
+        self.navigationController?.pushViewController(tabView, animated: true)
     }
     
 }

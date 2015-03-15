@@ -8,6 +8,10 @@
 
 import UIKit
 
+let barColor = UIColor(red: 35 / 255, green: 47 / 255, blue: 66 / 255, alpha: 1)
+let barTextColor = UIColor.whiteColor()
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -36,6 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let companyTableView = CompanyTableViewController(nibName: "CompanyTableViewController", bundle: nil)
         let naviController = UINavigationController(rootViewController: companyTableView)
         naviController.navigationBar.topItem?.title = "The Insider"
+        
+        naviController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: barTextColor]
+        naviController.navigationBar.tintColor = barTextColor
+        //naviController.navigationBar.backgroundColor = naviColor
+        naviController.navigationBar.barTintColor = barColor
+        
         window?.rootViewController = naviController
         window?.makeKeyAndVisible()
     }

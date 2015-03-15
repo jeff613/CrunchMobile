@@ -28,7 +28,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="4UD-Y6-1MK">
-                        <rect key="frame" x="13" y="13" width="312" height="197"/>
+                        <rect key="frame" x="8" y="4" width="322" height="215"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6rB-6J-7De">
                                 <rect key="frame" x="8" y="8" width="68" height="68"/>
@@ -44,11 +44,11 @@
                                     <constraint firstAttribute="width" constant="82" id="o6H-NK-HS8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunnyvale, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF1-mN-yix">
-                                <rect key="frame" x="173" y="50" width="138" height="22"/>
+                                <rect key="frame" x="173" y="50" width="148" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="nce-A0-8xe"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Went Public on Apr 12, 1996 / YHOO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8Z-9C-DMI">
-                                <rect key="frame" x="8" y="80" width="296" height="19"/>
+                                <rect key="frame" x="8" y="80" width="306" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18.5" id="zKB-lc-drC"/>
                                 </constraints>
@@ -72,7 +72,7 @@
                                     <constraint firstAttribute="height" constant="21" id="Lq8-7z-CeT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Founders:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nei-dF-Zfu">
@@ -82,11 +82,11 @@
                                     <constraint firstAttribute="height" constant="21" id="slH-ii-Icv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="116 Acquisitions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJu-xS-ck2">
-                                <rect key="frame" x="168" y="8" width="142" height="21"/>
+                                <rect key="frame" x="168" y="8" width="152" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="lwe-sG-NJG"/>
                                 </constraints>
@@ -101,11 +101,11 @@
                                     <constraint firstAttribute="height" constant="21" id="iUT-dl-itB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technology, Internet, Photography, Email, Portals, Search" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Diy-sN-Z2b">
-                                <rect key="frame" x="82" y="101" width="222" height="21"/>
+                                <rect key="frame" x="82" y="101" width="232" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -113,11 +113,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgh-CQ-XLU">
                                 <rect key="frame" x="8" y="126" width="52" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="http://www.yahoo.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DN2-k6-a11">
-                                <rect key="frame" x="82" y="126" width="139.5" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="http://www.yahoo.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DN2-k6-a11">
+                                <rect key="frame" x="81" y="126" width="140" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="n0x-VP-Xba"/>
                                 </constraints>
@@ -125,20 +125,20 @@
                                 <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yahoo! is a technology company that is known for its web services and applications" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4o-AV-Dxb">
-                                <rect key="frame" x="8" y="146" width="296" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jerry Yang, David Filo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zK-af-Oek">
-                                <rect key="frame" x="154" y="31" width="156" height="16"/>
+                                <rect key="frame" x="154" y="31" width="166" height="16"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yahoo! is a technology company that is known for its web services and applications" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4o-AV-Dxb">
+                                <rect key="frame" x="8" y="146" width="306" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.17490015045661289" green="0.24200344544408128" blue="0.33002799131016047" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Diy-sN-Z2b" secondAttribute="trailing" constant="8" id="17d-zf-BAv"/>
                             <constraint firstAttribute="bottom" secondItem="M4o-AV-Dxb" secondAttribute="bottom" constant="8" id="2X2-oU-Fij"/>
@@ -183,15 +183,16 @@
                         </variation>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.13725490200000001" green="0.1843137255" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="4UD-Y6-1MK" secondAttribute="bottom" constant="5" id="0yT-P0-wNv"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4UD-Y6-1MK" secondAttribute="bottom" constant="-4" id="0yT-P0-wNv"/>
                     <constraint firstAttribute="bottomMargin" secondItem="4UD-Y6-1MK" secondAttribute="bottom" constant="2" id="3tR-yk-lCX"/>
-                    <constraint firstItem="4UD-Y6-1MK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="9OI-yM-KAm"/>
+                    <constraint firstItem="4UD-Y6-1MK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9OI-yM-KAm"/>
                     <constraint firstItem="4UD-Y6-1MK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Bco-hY-6BJ"/>
                     <constraint firstItem="4UD-Y6-1MK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="Imb-3M-fOQ"/>
-                    <constraint firstItem="4UD-Y6-1MK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="P9H-mz-fUO"/>
+                    <constraint firstItem="4UD-Y6-1MK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-4" id="P9H-mz-fUO"/>
                     <constraint firstItem="e8d-CC-iZT" firstAttribute="leading" secondItem="cIX-Jq-esf" secondAttribute="trailing" constant="15" id="Qkd-ID-ZpP"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="4UD-Y6-1MK" secondAttribute="trailing" constant="5" id="R8q-YO-O0a"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="4UD-Y6-1MK" secondAttribute="trailing" id="R8q-YO-O0a"/>
                     <constraint firstItem="4UD-Y6-1MK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="2" id="TeN-cm-wSl"/>
                     <constraint firstAttribute="trailing" secondItem="e8d-CC-iZT" secondAttribute="trailing" constant="8" id="hTn-GA-jT7"/>
                     <constraint firstItem="e8d-CC-iZT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="j8Q-6E-ssi"/>
@@ -214,6 +215,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="acuisitions" destination="nJu-xS-ck2" id="dR8-kS-Lnx"/>
+                <outlet property="cardView" destination="4UD-Y6-1MK" id="rKu-a1-6ju"/>
                 <outlet property="catLabel" destination="Diy-sN-Z2b" id="Ri9-Ka-CRS"/>
                 <outlet property="companyLoc" destination="zF1-mN-yix" id="S1N-6i-kcP"/>
                 <outlet property="desc" destination="M4o-AV-Dxb" id="nua-81-FyI"/>
