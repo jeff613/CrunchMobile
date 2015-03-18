@@ -116,6 +116,8 @@ class CompanyTableViewController: UITableViewController {
         let detailsView = CompanyDetailViewController(nibName: "CompanyDetailViewController", bundle: nil)
         let gossipView = CompanyGossipViewController(nibName: "CompanyGossipViewController", bundle: nil)
         
+        detailsView.company = data[indexPath.row]
+        
         let tabView = UITabBarController()
         tabView.viewControllers = [gossipView, detailsView]
         gossipView.tabBarItem = UITabBarItem(title: "Gossip", image: nil, tag: 0)

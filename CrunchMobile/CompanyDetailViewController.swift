@@ -10,11 +10,36 @@ import UIKit
 
 class CompanyDetailViewController: UIViewController {
     
-    var company: Company?
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var foundDateLabel: UILabel!
+    @IBOutlet weak var foundersLabel: UILabel!
+    @IBOutlet weak var categoriesLabel: UILabel!
+    @IBOutlet weak var employeeNumLabel: UILabel!
+    @IBOutlet weak var acquisitionNumLabel: UILabel!
+    @IBOutlet weak var ipoInfoLabel: UILabel!
+    @IBOutlet weak var desciptionLabel: UILabel!
     
+    var company: Company?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let company = company {
+            logoImage.setImageWithURL(NSURL(string: company.profileImage!))
+            nameLabel.text = "???"  // need data from api
+            urlLabel.text = company.webLabel
+            locationLabel.text = company.companyLoc
+            foundDateLabel.text = "???" //need data from api
+            foundersLabel.text = company.founders
+            categoriesLabel.text = company.catLabel
+            employeeNumLabel.text = "???"
+            acquisitionNumLabel.text = company.acuisitions
+            ipoInfoLabel.text = company.ipoInfo
+            desciptionLabel.text = company.desc
+        }
     }
 
     override func didReceiveMemoryWarning() {
