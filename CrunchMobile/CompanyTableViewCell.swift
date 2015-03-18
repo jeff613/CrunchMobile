@@ -38,7 +38,7 @@ class CompanyTableViewCell: UITableViewCell {
         super.layoutSubviews()
     }
     
-    func setupCell(company: CompanyData){
+    func setupCell(company: Company){
         self.profileImage.setImageWithURL(NSURL(string: company.profileImage!))
         self.companyLoc.text = company.companyLoc
         self.ipoInfo.text = company.ipoInfo

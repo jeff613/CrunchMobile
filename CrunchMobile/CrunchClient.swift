@@ -14,14 +14,11 @@ class CrunchClient{
         return AFHTTPRequestOperationManager()
     }
     
-    class func getOrgList(skip: Int, count: Int){
+    class func getOrgList(skip: Int, count: Int, completion: (companies: [Company]?) -> ()){
         CrunchClient.SharedInstance.GET(sharedVariables.apiBaseUrl+"info?skip=\(skip)&count=\(count)", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             var results = response as NSArray
-            for index in 0..<results.count{
-                println("------------------------------------------")
-                println(results[index])
-                println("------------------------------------------")
-            }
+                var companies = Company.ConvertToCompanyData(results as [NSDictionary])
+                completion(companies: companies)
             }, failure: {(operation: AFHTTPRequestOperation!, error:NSError!) -> Void in
             
             })

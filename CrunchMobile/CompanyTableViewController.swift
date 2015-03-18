@@ -10,7 +10,7 @@ import UIKit
 
 class CompanyTableViewController: UITableViewController {
     
-    var data = [CompanyData]()
+    var data = [Company]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,15 @@ class CompanyTableViewController: UITableViewController {
         
         self.tableView.registerNib(UINib(nibName: "CompanyTableViewCell", bundle: nil), forCellReuseIdentifier: "CompanyCell")
         
-        data = MockData.CompanyMockData()
+        //data = MockData.CompanyMockData()
+        reloadDataFromNetwork()
+    }
+    
+    func reloadDataFromNetwork(){
+        CrunchClient.getOrgList(0, count: 10) { (companies) -> () in
+            self.data = companies!
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
