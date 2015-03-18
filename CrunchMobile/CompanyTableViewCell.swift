@@ -45,7 +45,7 @@ class CompanyTableViewCell: UITableViewCell {
         self.founders.text = company.founders
         self.acuisitions.text = company.acuisitions
         self.desc.text = company.desc
-        self.catLabel.text = company.catLabel
+        self.catLabel.text = company.foundedOn
         self.webLabel.text = company.webLabel
     }
 }

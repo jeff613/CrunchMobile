@@ -19,6 +19,7 @@ class CompanyData
     var catLabel: String?
     var webLabel: String?
     
+    
     init(profileImage: String, companyLoc: String, ipoInfo: String, founders: String, acuisitions: String, desc: String,  catLabel: String, webLabel: String){
         self.profileImage = profileImage
         self.companyLoc = companyLoc

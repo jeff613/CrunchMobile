@@ -15,18 +15,23 @@ class Company {
     var founders: String?
     var acuisitions: String?
     var desc: String?
-    var catLabel: String?
+    var foundedOn: String?
     var webLabel: String?
+    var companyName: String?
+    var fullDesc: String?
+    var stockSym: String?
     
-    init(profileImage: String, companyLoc: String, ipoInfo: String, founders: String, acuisitions: String, desc: String,  catLabel: String, webLabel: String){
+    init(profileImage: String, companyLoc: String, ipoInfo: String, founders: String, acuisitions: String, desc: String,  foundedOn: String, webLabel: String, compName: String, fullD: String, stockS: String){
         self.profileImage = profileImage
         self.companyLoc = companyLoc
         self.ipoInfo = ipoInfo
         self.founders = founders
         self.acuisitions = acuisitions
         self.desc = desc
-        self.catLabel = catLabel
+        self.foundedOn = foundedOn
         self.webLabel = webLabel
+        self.fullDesc = fullD
+        self.stockSym = stockS
     }
     
     class func ConvertToCompanyData(compArray: [NSDictionary]) -> [Company]{
@@ -42,8 +47,11 @@ class Company {
             var des = comp["Cshort_description"] as NSString
             var foundOn = comp["Cfounded_on"] as NSString
             var url = comp["Chomepage_url"] as NSString
+            var compName = comp["Cname"] as NSString
+            var fullD = comp["Cdescription"] as NSString
+            var stockS = comp["Cstock_symbol"] as NSString
             
-            companies.append(Company(profileImage: proImg, companyLoc: compLo, ipoInfo: ipo, founders: found, acuisitions: "\(acq)", desc: des, catLabel: foundOn, webLabel: url))
+            companies.append(Company(profileImage: proImg, companyLoc: compLo, ipoInfo: ipo, founders: found, acuisitions: "\(acq)", desc: des, foundedOn: foundOn, webLabel: url, compName: compName, fullD: fullD, stockS: stockS))
         }
         
         return companies

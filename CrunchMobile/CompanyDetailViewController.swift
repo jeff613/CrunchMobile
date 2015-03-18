@@ -27,18 +27,21 @@ class CompanyDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.logoImage.layer.cornerRadius = 5
+        self.logoImage.clipsToBounds = true
+        
         if let company = company {
             logoImage.setImageWithURL(NSURL(string: company.profileImage!))
-            nameLabel.text = "???"  // need data from api
+            nameLabel.text = company.companyName  // need data from api
             urlLabel.text = company.webLabel
             locationLabel.text = company.companyLoc
-            foundDateLabel.text = "???" //need data from api
+            foundDateLabel.text = company.foundedOn //need data from api
             foundersLabel.text = company.founders
-            categoriesLabel.text = company.catLabel
-            employeeNumLabel.text = "???"
-            acquisitionNumLabel.text = company.acuisitions
+            categoriesLabel.text = "category"
+            employeeNumLabel.text = company.acuisitions
+            acquisitionNumLabel.text = company.stockSym
             ipoInfoLabel.text = company.ipoInfo
-            desciptionLabel.text = company.desc
+            desciptionLabel.text = company.fullDesc
         }
     }
 

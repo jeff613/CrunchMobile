@@ -18,7 +18,7 @@ class CrunchClient{
         CrunchClient.SharedInstance.GET(sharedVariables.apiBaseUrl+"info?skip=\(skip)&count=\(count)", parameters: nil, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             var results = response as NSArray
                 var companies = Company.ConvertToCompanyData(results as [NSDictionary])
-                println(results)
+                //println(results)
                 completion(companies: companies)
             }, failure: {(operation: AFHTTPRequestOperation!, error:NSError!) -> Void in
             

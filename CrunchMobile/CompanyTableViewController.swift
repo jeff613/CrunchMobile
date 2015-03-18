@@ -25,6 +25,12 @@ class CompanyTableViewController: UITableViewController {
         
         self.tableView.registerNib(UINib(nibName: "CompanyTableViewCell", bundle: nil), forCellReuseIdentifier: "CompanyCell")
         
+        var headerFrame = CGRectMake(0, 0, self.tableView.frame.width, self.tableView.frame.height - 300)
+        var headerImage = UIImageView(image: UIImage(named: "IMG_0055")!)
+        headerImage.contentMode = UIViewContentMode.ScaleAspectFill
+        headerImage.bounds = CGRect(x: 0, y: 0, width: headerFrame.width, height: headerFrame.height)
+        self.tableView.tableHeaderView = headerImage
+        
         //data = MockData.CompanyMockData()
         reloadDataFromNetwork()
     }
@@ -119,7 +125,7 @@ class CompanyTableViewController: UITableViewController {
         detailsView.company = data[indexPath.row]
         
         let tabView = UITabBarController()
-        tabView.viewControllers = [gossipView, detailsView]
+        tabView.viewControllers = [detailsView, gossipView]
         gossipView.tabBarItem = UITabBarItem(title: "Gossip", image: nil, tag: 0)
         detailsView.tabBarItem = UITabBarItem(title: "Info", image: nil, tag: 1)
         tabView.tabBar.barTintColor = barColor
