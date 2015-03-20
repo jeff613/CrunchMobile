@@ -25,5 +25,14 @@ class CrunchClient{
             })
         
     }
+    
+    class func getCompanyList(skip: Int, count: Int, completion: (companies: [CompanyData]?) -> ()){
+        CrunchClient.SharedInstance.GET(sharedVariables.apiBaseUrl+"info?skip=\(skip)&count=\(count)", parameters: nil, success: { (operation:AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+                var companies = CompanyData.ConvertToCompanyData((response as NSArray) as [NSDictionary])
+                completion(companies: companies)
+            }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+            
+        }
+    }
 }
 

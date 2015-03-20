@@ -45,7 +45,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Went public on March 13, 1986" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPJ-YT-oAv">
-                    <rect key="frame" x="119" y="303" width="190" height="16"/>
+                    <rect key="frame" x="119" y="303" width="189.5" height="16"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                     <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San Francisco, CA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDd-Wf-4oO">
-                    <rect key="frame" x="119" y="132" width="114" height="16"/>
+                    <rect key="frame" x="119" y="132" width="113.5" height="16"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                     <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -137,13 +137,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1998-09-07" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTt-0V-CBK">
-                    <rect key="frame" x="119" y="173" width="70" height="16"/>
+                    <rect key="frame" x="119" y="173" width="69.5" height="16"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                     <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter is social network company.df dddsd dvdv  vvcx xvx v cxvxvxvx vxvx vvssfsd sfsfsfsfs " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVb-Gi-8WQ">
-                    <rect key="frame" x="27" y="336" width="302" height="32"/>
+                    <rect key="frame" x="27" y="336" width="301.5" height="31.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -154,6 +154,19 @@
                     <color key="textColor" red="0.0" green="0.67378123619999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fh-qN-mbt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                    <color key="backgroundColor" red="0.0" green="0.1802089929" blue="0.31330886990000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="BZz-OL-NTG"/>
+                    </constraints>
+                    <state key="normal" title="Close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onCloseButton:" destination="-1" eventType="touchUpInside" id="DE8-43-EtU"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.17490015049999999" green="0.24200344539999999" blue="0.33002799129999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
@@ -168,6 +181,7 @@
                 <constraint firstItem="X0F-fA-jqP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="27" id="9O1-z3-Exk"/>
                 <constraint firstItem="jtd-u1-r3X" firstAttribute="centerY" secondItem="tz3-JO-DdV" secondAttribute="centerY" id="A75-r5-PIf"/>
                 <constraint firstItem="DI2-zs-VAZ" firstAttribute="top" secondItem="6uv-mp-hrQ" secondAttribute="bottom" constant="10" id="AKi-Nn-UqD"/>
+                <constraint firstItem="0Fh-qN-mbt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HPg-C4-dg8"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tz3-JO-DdV" secondAttribute="trailing" constant="27" id="IdK-5W-6pP"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CDd-Wf-4oO" secondAttribute="trailing" constant="27" id="Ihb-dt-gWV"/>
                 <constraint firstItem="jtd-u1-r3X" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="27" id="KQr-6a-tng"/>
@@ -175,6 +189,7 @@
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fVb-Gi-8WQ" secondAttribute="bottom" constant="8" id="LxY-Xl-jUw"/>
                 <constraint firstItem="6uv-mp-hrQ" firstAttribute="leading" secondItem="jtd-u1-r3X" secondAttribute="trailing" constant="-90" id="N2u-Rh-ji4"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W95-xT-T1A" secondAttribute="trailing" constant="27" id="Nml-Dr-hDJ"/>
+                <constraint firstAttribute="trailing" secondItem="0Fh-qN-mbt" secondAttribute="trailing" id="PHw-X1-K7X"/>
                 <constraint firstItem="lra-ja-bAy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="27" id="Q7F-GN-REO"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LMY-Qp-1xm" secondAttribute="trailing" constant="27" id="Qg3-A6-DBI"/>
                 <constraint firstItem="X0F-fA-jqP" firstAttribute="top" secondItem="6uv-mp-hrQ" secondAttribute="bottom" constant="36" id="U1M-tP-tXU"/>
@@ -197,6 +212,7 @@
                 <constraint firstItem="X0F-fA-jqP" firstAttribute="top" secondItem="DI2-zs-VAZ" secondAttribute="bottom" constant="10" id="oLp-1I-evE"/>
                 <constraint firstItem="eTt-0V-CBK" firstAttribute="leading" secondItem="kWB-Q5-bDN" secondAttribute="trailing" constant="2" id="pYi-xB-OgW"/>
                 <constraint firstItem="V05-2B-RNc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="27" id="pee-PK-8k5"/>
+                <constraint firstItem="0Fh-qN-mbt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qw3-O8-ZhC"/>
                 <constraint firstItem="V05-2B-RNc" firstAttribute="top" secondItem="X0F-fA-jqP" secondAttribute="bottom" constant="10" id="sdq-ge-JER"/>
                 <constraint firstItem="jtd-u1-r3X" firstAttribute="top" secondItem="kWB-Q5-bDN" secondAttribute="bottom" constant="10" id="shv-oB-nLi"/>
                 <constraint firstItem="tz3-JO-DdV" firstAttribute="leading" secondItem="jtd-u1-r3X" secondAttribute="trailing" constant="2" id="t0n-pW-Kuj"/>
@@ -207,6 +223,7 @@
                 <constraint firstItem="CJW-bz-go3" firstAttribute="leading" secondItem="X0F-fA-jqP" secondAttribute="trailing" constant="2" id="yii-QF-uZb"/>
                 <constraint firstItem="W95-xT-T1A" firstAttribute="centerY" secondItem="6uv-mp-hrQ" secondAttribute="centerY" constant="-0.5" id="ykb-nq-z5a"/>
             </constraints>
+            <nil key="simulatedTopBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <variation key="default">

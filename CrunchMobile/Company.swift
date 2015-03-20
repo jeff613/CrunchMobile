@@ -50,7 +50,7 @@ class Company {
             var compName = comp["Cname"] as NSString
             var fullD = comp["Cdescription"] as NSString
             var stockS = comp["Cstock_symbol"] as NSString
-            
+            println(proImg)
             companies.append(Company(profileImage: proImg, companyLoc: compLo, ipoInfo: ipo, founders: found, acuisitions: "\(acq)", desc: des, foundedOn: foundOn, webLabel: url, compName: compName, fullD: fullD, stockS: stockS))
         }
         

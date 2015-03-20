@@ -24,8 +24,13 @@ class CompanyDetailViewController: UIViewController {
     
     var company: Company?
     
+    @IBAction func onCloseButton(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         self.logoImage.layer.cornerRadius = 5
         self.logoImage.clipsToBounds = true
@@ -43,8 +48,20 @@ class CompanyDetailViewController: UIViewController {
             ipoInfoLabel.text = company.ipoInfo
             desciptionLabel.text = company.fullDesc
         }
+        
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
     }
 
+    func cancelCall(){
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

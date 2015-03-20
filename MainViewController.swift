@@ -8,30 +8,41 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController{
 
     @IBOutlet weak var tableView: UITableView!
-    
-    var data = [CompanyData]()
+    var companyData = [CompanyData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
         self.tableView.dataSource = self
-        data = MockData.CompanyMockData()
+        self.tableView.delegate = self
+        reloadDataFromNetwork()
+      }
+    func reloadDataFromNetwork(){
+        CrunchClient.getCompanyList(0, count: 10) { (companies) -> () in
+            self.companyData = companies!
+            self.tableView.reloadData()
+        }
     }
 
+}
+
+extension MainViewController: UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell") as InsiderTableViewCell
-        cell.setupCell(data[indexPath.row])
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("tableCell") as MainTableViewCell
+        cell.setupCell(companyData[indexPath.row])
         return cell
     }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return companyData.count
     }
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+}
+
+extension MainViewController: UITableViewDelegate{
+
 }
