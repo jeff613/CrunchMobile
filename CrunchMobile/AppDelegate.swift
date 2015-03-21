@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        JeffLogic()
-        //SampleStartup()
+        //JeffLogic()
+        SampleStartup()
         return true
     }
     
@@ -28,8 +28,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var storyBoard = UIStoryboard(name: "SampleSB", bundle: nil)
         
         var mainVC = storyBoard.instantiateViewControllerWithIdentifier("mainVC") as MainViewController
+        let naviController = UINavigationController(rootViewController: mainVC)
+        naviController.navigationBar.topItem?.title = "The Insider"
         
-        self.window?.rootViewController = UINavigationController(rootViewController: mainVC)
+        naviController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: barTextColor]
+        naviController.navigationBar.tintColor = barTextColor
+        //naviController.navigationBar.backgroundColor = naviColor
+        naviController.navigationBar.barTintColor = barColor
+
+        
+        self.window?.rootViewController = naviController
         
     }
     
