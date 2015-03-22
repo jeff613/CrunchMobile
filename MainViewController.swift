@@ -11,6 +11,8 @@ import UIKit
 class MainViewController: UIViewController{
     
     var tableViewOffset = CGPointZero
+    var pageNumber = 0
+    let count = 10
 
     @IBOutlet weak var tableView: UITableView!
     var companyData = [CompanyData]()
@@ -19,20 +21,26 @@ class MainViewController: UIViewController{
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        reloadDataFromNetwork()
+        reloadDataFromNetwork(pageNumber, cnt: count)
         //self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.backgroundColor = UIColor.whiteColor()
         self.tableView.estimatedRowHeight = 45
        // self.tableView.rowHeight = UITableViewAutomaticDimension
-        
+        tableView.addInfiniteScrollingWithActionHandler(insertMore)
         addTableHeader()
       }
     
-    func reloadDataFromNetwork(){
-        CrunchClient.getCompanyList(0, count: 10) { (companies) -> () in
-            self.companyData = companies!
+    func reloadDataFromNetwork(pgNumber: Int, cnt: Int){
+        CrunchClient.getCompanyList(pgNumber, count: cnt) { (companies) -> () in
+            self.companyData.extend(companies!)
             self.tableView.reloadData()
+            self.tableView.infiniteScrollingView.stopAnimating()
         }
+    }
+    
+    func insertMore(){
+        pageNumber += count
+        reloadDataFromNetwork(pageNumber, cnt: count)
     }
     
     func addTableHeader(){

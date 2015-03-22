@@ -10,6 +10,10 @@
 		49EC41FDA43143C1C92135F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B514B46DB5FBB5BA1EC62B9 /* libPods.a */; };
 		893638CF1AB2316900F7DF0B /* CrunchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893638CE1AB2316900F7DF0B /* CrunchClient.swift */; };
 		893638D11AB232D900F7DF0B /* SharedVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893638D01AB232D900F7DF0B /* SharedVariables.swift */; };
+		89480D7D1ABE9308009F6882 /* CompanyCulture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89480D7C1ABE9308009F6882 /* CompanyCulture.swift */; };
+		89480D7F1ABE9321009F6882 /* CompanyValuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89480D7E1ABE9321009F6882 /* CompanyValuation.swift */; };
+		89480D811ABE9331009F6882 /* CompanyGrowth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89480D801ABE9331009F6882 /* CompanyGrowth.swift */; };
+		89480D831ABE9345009F6882 /* CompanyStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89480D821ABE9345009F6882 /* CompanyStock.swift */; };
 		8971360E1ABB94E700EFB1A0 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971360D1ABB94E700EFB1A0 /* MainTableViewCell.swift */; };
 		897136101ABC7AE500EFB1A0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8971360F1ABC7AE500EFB1A0 /* DetailsViewController.swift */; };
 		89E068411AAFCE90008F79BE /* SampleSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E068401AAFCE90008F79BE /* SampleSB.storyboard */; };
@@ -49,6 +53,10 @@
 		796FDE22919D45E1588D29D1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		893638CE1AB2316900F7DF0B /* CrunchClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrunchClient.swift; sourceTree = "<group>"; };
 		893638D01AB232D900F7DF0B /* SharedVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedVariables.swift; sourceTree = "<group>"; };
+		89480D7C1ABE9308009F6882 /* CompanyCulture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyCulture.swift; sourceTree = "<group>"; };
+		89480D7E1ABE9321009F6882 /* CompanyValuation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyValuation.swift; sourceTree = "<group>"; };
+		89480D801ABE9331009F6882 /* CompanyGrowth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyGrowth.swift; sourceTree = "<group>"; };
+		89480D821ABE9345009F6882 /* CompanyStock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyStock.swift; sourceTree = "<group>"; };
 		8971360D1ABB94E700EFB1A0 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8971360F1ABC7AE500EFB1A0 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		89E068401AAFCE90008F79BE /* SampleSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SampleSB.storyboard; sourceTree = "<group>"; };
@@ -154,6 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				89E068461AB0009F008F79BE /* CompanyData.swift */,
+				89480D7C1ABE9308009F6882 /* CompanyCulture.swift */,
+				89480D7E1ABE9321009F6882 /* CompanyValuation.swift */,
+				89480D801ABE9331009F6882 /* CompanyGrowth.swift */,
+				89480D821ABE9345009F6882 /* CompanyStock.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -407,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89480D7D1ABE9308009F6882 /* CompanyCulture.swift in Sources */,
 				8971360E1ABB94E700EFB1A0 /* MainTableViewCell.swift in Sources */,
 				893638D11AB232D900F7DF0B /* SharedVariables.swift in Sources */,
 				DFA61DE21AAEC3A000EC202F /* CompanyTableViewCell.swift in Sources */,
@@ -414,9 +427,12 @@
 				DFA61DE81AAECCCB00EC202F /* CompanyTableViewController.swift in Sources */,
 				DF4FE0791AB633A200B730D1 /* CompanyGossipViewController.swift in Sources */,
 				89E068431AAFCF12008F79BE /* MainViewController.swift in Sources */,
+				89480D831ABE9345009F6882 /* CompanyStock.swift in Sources */,
 				893638CF1AB2316900F7DF0B /* CrunchClient.swift in Sources */,
+				89480D811ABE9331009F6882 /* CompanyGrowth.swift in Sources */,
 				89E068471AB0009F008F79BE /* CompanyData.swift in Sources */,
 				DF4FE0721AAED82B00B730D1 /* Company.swift in Sources */,
+				89480D7F1ABE9321009F6882 /* CompanyValuation.swift in Sources */,
 				DFA61DEC1AAECFB100EC202F /* CompanyDetailViewController.swift in Sources */,
 				897136101ABC7AE500EFB1A0 /* DetailsViewController.swift in Sources */,
 			);

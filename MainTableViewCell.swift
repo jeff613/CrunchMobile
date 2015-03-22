@@ -40,7 +40,7 @@ class MainTableViewCell: UITableViewCell {
     func setupCell(company: CompanyData){
         self.companyLogo.setImageWithURL(NSURL(string: company.profileImage!))
         self.companyName.text = company.companyName
-        self.ipoInfo.text = company.ipoInfo
+        self.ipoInfo.text = company.companyLoc
         self.founderInfo.text = company.founders
         self.foundedOn.text = company.foundedOn
         self.employeeNumber.text = "\(company.numberOfEmployees!)"

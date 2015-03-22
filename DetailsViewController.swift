@@ -22,6 +22,18 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var employees: UILabel!
     @IBOutlet weak var website: UILabel!
     
+    // valuation
+    @IBOutlet weak var valuationLabel: UILabel!
+    
+    // stock
+    @IBOutlet weak var stockLabel: UILabel!
+    
+    // growth
+    @IBOutlet weak var growthLabel: UILabel!
+    
+    // culture
+    @IBOutlet weak var workLabel: UILabel!
+    
     var company: CompanyData?
     
     override func viewDidLoad() {
@@ -45,6 +57,15 @@ class DetailsViewController: UIViewController {
         self.foundedOn.text = company?.foundedOn
         self.employees.text = "\(company!.numberOfEmployees!)"
         self.website.text = company?.webLabel
+        var formattedValuation = NSString(format: "%.2f", company!.companyValue!.Valuation)
+        self.valuationLabel.text = "$\(formattedValuation)M"
+        
+        var formattedStock = NSString(format: "%.2f", company!.companyStock!.StockPrice)
+        self.stockLabel.text = "$\(formattedStock)"
+        let growth = company?.companyGrowth?.GrowthRate!
+        self.growthLabel.text = "\(growth!)%"
+        let culture = company?.companyCulture?.CulturePercent
+        self.workLabel.text = "\(culture!)%"
     }
     
     func setRoundCorner(view: UIView, radius: CGFloat){
