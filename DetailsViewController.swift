@@ -22,6 +22,12 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var employees: UILabel!
     @IBOutlet weak var website: UILabel!
     
+    @IBOutlet weak var circleChartTest: UIView!
+    @IBOutlet weak var workCircleView: UIView!
+    
+    var circleChart: PNCircleChart?
+    var workCircleChart: PNCircleChart?
+    
     // valuation
     @IBOutlet weak var valuationLabel: UILabel!
     
@@ -35,6 +41,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var workLabel: UILabel!
     
     var company: CompanyData?
+    var textColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +53,41 @@ class DetailsViewController: UIViewController {
         setRoundCorner(growthView, radius: 10)
         setRoundCorner(profileImage, radius: 4)
         
+        textColor = valuationLabel.textColor
+        
         setupCells()
-        // Do any additional setup after loading the view.
+        
+        setupCircleChart()
+        setupWorkCircle()
+    }
+    
+    func setupWorkCircle(){
+        self.workCircleChart = PNCircleChart(frame: CGRectMake(0, 0, workCircleView.frame.width, workCircleView.frame.height), total: 100, current: 0, clockwise: true)
+        //PNCircleChart(frame: CGRectMake(0, 0, circleChartTest.frame.width, circleChartTest.frame.height))
+        self.workCircleChart?.backgroundColor = UIColor.clearColor()
+        self.workCircleChart?.strokeColor = textColor
+        self.workCircleChart?.countingLabel.font = UIFont(name: "Times", size: 14)
+        self.workCircleChart?.countingLabel.textColor = textColor
+        self.workCircleChart?.strokeChart()
+        self.workCircleChart?.circleBackground.strokeColor = dialogView.backgroundColor?.CGColor
+        
+        workCircleView.addSubview(self.workCircleChart!)
+        
+        self.workCircleChart?.updateChartByCurrent(company?.companyCulture?.CulturePercent)
+    }
+    func setupCircleChart(){
+        self.circleChart = PNCircleChart(frame: CGRectMake(0, 0, circleChartTest.frame.width, circleChartTest.frame.height), total: 100, current: 0, clockwise: true)
+            //PNCircleChart(frame: CGRectMake(0, 0, circleChartTest.frame.width, circleChartTest.frame.height))
+        self.circleChart?.backgroundColor = UIColor.clearColor()
+        self.circleChart?.strokeColor = textColor
+        self.circleChart?.countingLabel.font = UIFont(name: "Times", size: 14)
+        self.circleChart?.countingLabel.textColor = textColor
+        self.circleChart?.strokeChart()
+        self.circleChart?.circleBackground.strokeColor = dialogView.backgroundColor?.CGColor
+        
+        circleChartTest.addSubview(self.circleChart!)
+        
+        self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
     }
     
     func setupCells(){

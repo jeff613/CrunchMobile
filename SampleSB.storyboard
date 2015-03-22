@@ -344,6 +344,14 @@
                                                 <color key="textColor" red="0.0" green="0.72768702649999994" blue="0.41199708410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5n-eR-WjC">
+                                                <rect key="frame" x="41" y="30" width="54" height="43"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="TOY-eE-x6M"/>
+                                                    <constraint firstAttribute="height" constant="43" id="azg-pR-iFs"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvM-FJ-slb">
                                                 <rect key="frame" x="8" y="74" width="27" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -359,6 +367,8 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="centerY" secondItem="l5n-eR-WjC" secondAttribute="centerY" id="EH2-bl-Kdg"/>
+                                            <constraint firstAttribute="centerX" secondItem="l5n-eR-WjC" secondAttribute="centerX" id="Uyq-Ic-JYj"/>
                                             <constraint firstAttribute="width" constant="137" id="b8Y-b3-Gxy"/>
                                             <constraint firstAttribute="centerY" secondItem="Z10-Qv-OQ3" secondAttribute="centerY" id="bUM-dw-Byl"/>
                                             <constraint firstAttribute="centerX" secondItem="Z10-Qv-OQ3" secondAttribute="centerX" id="mdw-Z6-Hca"/>
@@ -381,6 +391,14 @@
                                                 <color key="textColor" red="0.0" green="0.72768702649999994" blue="0.41199708410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BUz-hj-ja5">
+                                                <rect key="frame" x="41" y="30" width="54" height="43"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="54" id="q12-rD-2PZ"/>
+                                                    <constraint firstAttribute="height" constant="43" id="qrU-G8-IqH"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Like" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGz-xQ-EP5">
                                                 <rect key="frame" x="8" y="73" width="27" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -399,6 +417,8 @@
                                             <constraint firstAttribute="height" constant="102" id="9k3-M3-b9a"/>
                                             <constraint firstAttribute="width" constant="137" id="Fkh-CE-DbC"/>
                                             <constraint firstAttribute="centerY" secondItem="p9o-Iv-Sq3" secondAttribute="centerY" id="INZ-DE-jIg"/>
+                                            <constraint firstAttribute="centerX" secondItem="BUz-hj-ja5" secondAttribute="centerX" id="axg-2A-bc6"/>
+                                            <constraint firstAttribute="centerY" secondItem="BUz-hj-ja5" secondAttribute="centerY" id="eEg-Qd-3sC"/>
                                             <constraint firstAttribute="centerX" secondItem="p9o-Iv-Sq3" secondAttribute="centerX" id="kga-8K-Vw1"/>
                                         </constraints>
                                     </view>
@@ -539,6 +559,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="circleChartTest" destination="BUz-hj-ja5" id="cJk-a8-nIE"/>
                         <outlet property="comparyName" destination="aG9-QC-NRe" id="Ohb-JP-JNW"/>
                         <outlet property="dialogView" destination="Prc-br-i8F" id="Ybb-Nf-Ccv"/>
                         <outlet property="employees" destination="fhN-Bq-usr" id="0yY-W0-5I3"/>
@@ -552,6 +573,7 @@
                         <outlet property="valuationLabel" destination="8mJ-M8-PND" id="mtN-lM-fVq"/>
                         <outlet property="valueView" destination="ZZ4-od-ecm" id="9Op-3o-N6k"/>
                         <outlet property="website" destination="5ZY-Ks-nPH" id="7DK-hD-vAO"/>
+                        <outlet property="workCircleView" destination="l5n-eR-WjC" id="Opb-3c-vjc"/>
                         <outlet property="workLabel" destination="Z10-Qv-OQ3" id="b1f-lM-CgZ"/>
                         <outlet property="workView" destination="1uE-nc-pQi" id="sJ1-40-Meh"/>
                     </connections>
