@@ -23,11 +23,11 @@ class MainViewController: UIViewController{
         self.tableView.delegate = self
         reloadDataFromNetwork(pageNumber, cnt: count)
         //self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.backgroundColor = UIColor.whiteColor()
+        //self.tableView.backgroundColor = UIColor.whiteColor()
         self.tableView.estimatedRowHeight = 45
        // self.tableView.rowHeight = UITableViewAutomaticDimension
         tableView.addInfiniteScrollingWithActionHandler(insertMore)
-        addTableHeader()
+       // addTableHeader()
       }
     
     func reloadDataFromNetwork(pgNumber: Int, cnt: Int){

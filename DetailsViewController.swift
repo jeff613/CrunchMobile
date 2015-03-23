@@ -24,6 +24,10 @@ class DetailsViewController: UIViewController {
     
     @IBOutlet weak var circleChartTest: UIView!
     @IBOutlet weak var workCircleView: UIView!
+    @IBOutlet weak var valuationCount: UILabel!
+    @IBOutlet weak var stockCount: UILabel!
+    @IBOutlet weak var growthCount: UILabel!
+    @IBOutlet weak var workCount: UILabel!
     
     var circleChart: PNCircleChart?
     var workCircleChart: PNCircleChart?
@@ -71,7 +75,7 @@ class DetailsViewController: UIViewController {
         self.workCircleChart?.strokeChart()
         self.workCircleChart?.circleBackground.strokeColor = dialogView.backgroundColor?.CGColor
         
-        workCircleView.addSubview(self.workCircleChart!)
+        self.workCircleView.addSubview(self.workCircleChart!)
         
         self.workCircleChart?.updateChartByCurrent(company?.companyCulture?.CulturePercent)
     }
@@ -85,7 +89,7 @@ class DetailsViewController: UIViewController {
         self.circleChart?.strokeChart()
         self.circleChart?.circleBackground.strokeColor = dialogView.backgroundColor?.CGColor
         
-        circleChartTest.addSubview(self.circleChart!)
+        self.circleChartTest.addSubview(self.circleChart!)
         
         self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
     }
@@ -106,6 +110,10 @@ class DetailsViewController: UIViewController {
         self.growthLabel.text = "\(growth!)%"
         let culture = company?.companyCulture?.CulturePercent
         self.workLabel.text = "\(culture!)%"
+        self.valuationCount.text = "\(company!.companyValue!.Votes) votes"
+        self.stockCount.text = "\(company!.companyStock!.Votes) votes"
+        self.growthCount.text = "\(company!.companyGrowth!.Votes!) votes"
+        self.workCount.text = "\(company!.companyCulture!.Votes) votes"
     }
     
     func setRoundCorner(view: UIView, radius: CGFloat){
@@ -122,14 +130,59 @@ class DetailsViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func onGrowthLike(sender: UIButton) {
+        //Growth-outlook(N+1) = [N*Growth-outlook(N)+1]/(N+1)
+        company!.companyGrowth!.GrowthRate! = (((company!.companyGrowth!.GrowthRate!) * (company!.companyGrowth!.Votes!) + 1)/(company!.companyGrowth!.Votes! + 1))
+        company!.companyGrowth!.Votes! += 1
+        //println("\(company!.companyGrowth!.GrowthRate!)")
+        self.growthCount.text = "\(company!.companyGrowth!.Votes!) votes"
+        self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
     }
-    */
+    
+    
+    @IBAction func onGrowthUnlike(sender: UIButton) {
+        //Growth-outlook(N+1) = [N*Growth-outlook(N)-1]/(N+1)
+        company!.companyGrowth!.GrowthRate! = (((company!.companyGrowth!.GrowthRate!) * (company!.companyGrowth!.Votes!) - 1)/(company!.companyGrowth!.Votes! + 1))
+        company!.companyGrowth!.Votes! += 1
+        
+        self.growthCount.text = "\(company!.companyGrowth!.Votes!) votes"
+        self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
 
+    }
+
+    
+    @IBAction func onWorkLike(sender: UIButton) {
+        // Work-culture(N+1) = [N* Work-culture(N)+1]/(N+1)
+        company!.companyCulture!.CulturePercent = ((company!.companyCulture!.CulturePercent) * (company!.companyCulture!.Votes) + 1)/(company!.companyCulture!.Votes + 1)
+        company!.companyCulture!.Votes += 1
+        
+        self.workCount.text = "\(company!.companyCulture!.Votes) votes"
+        self.workCircleChart?.updateChartByCurrent(company!.companyCulture!.CulturePercent)
+    }
+ 
+   
+    @IBAction func onWorkUnlike(sender: UIButton) {
+        // Work-culture (N+1) = [N* Work-culture(N)-1]/(N+1)
+        company!.companyCulture!.CulturePercent = ((company!.companyCulture!.CulturePercent) * (company!.companyCulture!.Votes) - 1)/(company!.companyCulture!.Votes + 1)
+        company!.companyCulture!.Votes += 1
+        
+        self.workCount.text = "\(company!.companyCulture!.Votes) votes"
+        self.workCircleChart?.updateChartByCurrent(company!.companyCulture!.CulturePercent)
+    }
+    
+    @IBAction func onValuationLike(sender: UIButton) {
+    }
+    
+    @IBAction func onValuationUnlike(sender: UIButton) {
+    }
+    
+    
+    @IBAction func onStockLike(sender: UIButton) {
+    }
+    
+    
+    @IBAction func onStockUnlike(sender: UIButton) {
+    }
+    
 }

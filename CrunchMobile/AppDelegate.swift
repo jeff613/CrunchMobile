@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var mainVC = storyBoard.instantiateViewControllerWithIdentifier("mainVC") as MainViewController
         let naviController = UINavigationController(rootViewController: mainVC)
-        naviController.navigationBar.topItem?.title = "The Insider"
+        naviController.navigationBar.topItem?.title = "Crunch Insignt"
         
         naviController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: barTextColor]
         naviController.navigationBar.tintColor = barTextColor
