@@ -23,6 +23,7 @@ class MainViewController: UIViewController{
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+
         reloadDataFromNetwork(pageNumber, cnt: count)
         //self.tableView.rowHeight = UITableViewAutomaticDimension;
         //self.tableView.backgroundColor = UIColor.whiteColor()
