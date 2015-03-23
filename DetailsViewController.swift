@@ -143,6 +143,7 @@ class DetailsViewController: UIViewController {
         self.growthCount.text = "\(company!.companyGrowth!.Votes!) votes"
         self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
         self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
+        //println("P-Incr GR: \(company!.companyGrowth!.GrowthRate)")
     }
     
     

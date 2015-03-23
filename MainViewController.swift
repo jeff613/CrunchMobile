@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController{
     
+    let progressIndicatorView = CircularLoaderView(frame: CGRectZero)
+    
     var tableViewOffset = CGPointZero
     var pageNumber = 0
     let count = 10
@@ -28,10 +30,18 @@ class MainViewController: UIViewController{
        // self.tableView.rowHeight = UITableViewAutomaticDimension
         tableView.addInfiniteScrollingWithActionHandler(insertMore)
        // addTableHeader()
+        self.view.addSubview(self.progressIndicatorView)
+        self.progressIndicatorView.frame = self.view.bounds
+        self.progressIndicatorView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        //self.progressIndicatorView.progress = 0.2
       }
     
     func reloadDataFromNetwork(pgNumber: Int, cnt: Int){
         CrunchClient.getCompanyList(pgNumber, count: cnt) { (companies) -> () in
+            if(pgNumber == 0){
+                self.progressIndicatorView.reveal()
+                self.progressIndicatorView.removeFromSuperview()
+            }
             self.companyData.extend(companies!)
             self.tableView.reloadData()
             self.tableView.infiniteScrollingView.stopAnimating()
