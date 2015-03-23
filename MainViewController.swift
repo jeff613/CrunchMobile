@@ -38,6 +38,7 @@ class MainViewController: UIViewController{
       }
     
     func reloadDataFromNetwork(pgNumber: Int, cnt: Int){
+        SVProgressHUD.show()
         CrunchClient.getCompanyList(pgNumber, count: cnt) { (companies) -> () in
             if(pgNumber == 0){
                 self.progressIndicatorView.reveal()
@@ -46,6 +47,7 @@ class MainViewController: UIViewController{
             self.companyData.extend(companies!)
             self.tableView.reloadData()
             self.tableView.infiniteScrollingView.stopAnimating()
+            SVProgressHUD.dismiss()
         }
     }
     

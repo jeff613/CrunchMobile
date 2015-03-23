@@ -238,8 +238,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="85X-4H-OKu"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.3486426767666666" green="0.3486426767666666" blue="0.3486426767666666" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" red="1" green="0.54541184529999998" blue="0.073532040330000006" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sje-ge-GCe">
@@ -268,8 +268,14 @@
                                                     <action selector="onStockLike:" destination="R0R-Ea-YZ5" eventType="touchUpInside" id="g7w-vY-6dc"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-8f-dVY">
+                                                <rect key="frame" x="37" y="73" width="62.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" red="1" green="0.54541184529999998" blue="0.073532040330000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw8-cD-S0A">
-                                                <rect key="frame" x="105" y="70" width="24" height="24"/>
+                                                <rect key="frame" x="105" y="75" width="24" height="24"/>
                                                 <color key="tintColor" red="1" green="0.2218196449" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="tdown">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -278,12 +284,6 @@
                                                     <action selector="onStockUnlike:" destination="R0R-Ea-YZ5" eventType="touchUpInside" id="2hP-BK-Vzf"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sX-8f-dVY">
-                                                <rect key="frame" x="37" y="73" width="62.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" red="1" green="0.54541184529999998" blue="0.073532040330000006" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -318,8 +318,14 @@
                                                     <action selector="onValuationLike:" destination="R0R-Ea-YZ5" eventType="touchUpInside" id="WWh-Pi-Ju4"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM4-nO-obk">
+                                                <rect key="frame" x="37" y="73" width="62.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <color key="textColor" red="1" green="0.54541184529999998" blue="0.073532040330000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-ZF-TwE">
-                                                <rect key="frame" x="105" y="70" width="24" height="24"/>
+                                                <rect key="frame" x="105" y="75" width="24" height="24"/>
                                                 <color key="tintColor" red="1" green="0.2218196449" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="tdown">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -328,12 +334,6 @@
                                                     <action selector="onValuationUnlike:" destination="R0R-Ea-YZ5" eventType="touchUpInside" id="GKl-Pg-Lq4"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 Votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lM4-nO-obk">
-                                                <rect key="frame" x="37" y="73" width="62.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                <color key="textColor" red="1" green="0.54541184529999998" blue="0.073532040330000006" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -368,7 +368,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOz-OP-z9I">
-                                                <rect key="frame" x="103" y="70" width="24" height="24"/>
+                                                <rect key="frame" x="103" y="74" width="24" height="24"/>
                                                 <color key="tintColor" red="1" green="0.2218196449" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="tdown">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -439,7 +439,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rk6-jI-Opd">
-                                                <rect key="frame" x="105" y="70" width="24" height="24"/>
+                                                <rect key="frame" x="105" y="74" width="24" height="24"/>
                                                 <color key="tintColor" red="1" green="0.22181964492334127" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="tdown">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
