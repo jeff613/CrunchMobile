@@ -38,6 +38,7 @@ class MainViewController: UIViewController{
         }
     }
     
+    
     func insertMore(){
         pageNumber += count
         reloadDataFromNetwork(pageNumber, cnt: count)
@@ -69,6 +70,7 @@ class MainViewController: UIViewController{
         var destVC = segue.destinationViewController as DetailsViewController
         var indexPath = self.tableView.indexPathForSelectedRow()
         destVC.company = companyData[indexPath!.row]
+        println(companyData[indexPath!.row].companyCulture!.CulturePercent)
     }
 }
 

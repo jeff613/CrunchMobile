@@ -133,42 +133,60 @@ class DetailsViewController: UIViewController {
     
     @IBAction func onGrowthLike(sender: UIButton) {
         //Growth-outlook(N+1) = [N*Growth-outlook(N)+1]/(N+1)
-        company!.companyGrowth!.GrowthRate! = (((company!.companyGrowth!.GrowthRate!) * (company!.companyGrowth!.Votes!) + 1)/(company!.companyGrowth!.Votes! + 1))
+        //println("B-Incr GR: \(company!.companyGrowth!.GrowthRate!) Votes: \(company!.companyGrowth!.Votes!) ")
+        var newGrowthRate: Double = Double((company!.companyGrowth!.GrowthRate!) * (company!.companyGrowth!.Votes!) + 100)
         company!.companyGrowth!.Votes! += 1
-        //println("\(company!.companyGrowth!.GrowthRate!)")
+        company!.companyGrowth!.GrowthRate! = Int(round(newGrowthRate/Double(company!.companyGrowth!.Votes!)))
+        
+        //company!.companyGrowth!.GrowthRate! = (((company!.companyGrowth!.GrowthRate!) * (company!.companyGrowth!.Votes!) + 100)/(company!.companyGrowth!.Votes! + 1))
+        // println("P-Incr GR: \(company!.companyGrowth!.GrowthRate!) Votes: \(company!.companyGrowth!.Votes!) ")
         self.growthCount.text = "\(company!.companyGrowth!.Votes!) votes"
+        self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
         self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
     }
     
     
     @IBAction func onGrowthUnlike(sender: UIButton) {
         //Growth-outlook(N+1) = [N*Growth-outlook(N)-1]/(N+1)
-        company!.companyGrowth!.GrowthRate! = (((company!.companyGrowth!.GrowthRate!) * (company!.companyGrowth!.Votes!) - 1)/(company!.companyGrowth!.Votes! + 1))
+        // println("B-Decr GR: \(company!.companyGrowth!.GrowthRate!) Votes: \(company!.companyGrowth!.Votes!) ")
+        var newGrowthRate: Double = Double((company!.companyGrowth!.GrowthRate!) * (company!.companyGrowth!.Votes!) - 100)
         company!.companyGrowth!.Votes! += 1
+        company!.companyGrowth!.GrowthRate! = Int(round(newGrowthRate/Double(company!.companyGrowth!.Votes!)))
+        
+        //company!.companyGrowth!.GrowthRate! = (((company!.companyGrowth!.GrowthRate!) * (company!.companyGrowth!.Votes!) - 100)/(company!.companyGrowth!.Votes! + 1))
+        
+        // println("P-Decr GR: \(company!.companyGrowth!.GrowthRate!) Votes: \(company!.companyGrowth!.Votes!) ")
         
         self.growthCount.text = "\(company!.companyGrowth!.Votes!) votes"
         self.circleChart?.updateChartByCurrent(company?.companyGrowth?.GrowthRate)
-
     }
 
     
     @IBAction func onWorkLike(sender: UIButton) {
         // Work-culture(N+1) = [N* Work-culture(N)+1]/(N+1)
-        company!.companyCulture!.CulturePercent = ((company!.companyCulture!.CulturePercent) * (company!.companyCulture!.Votes) + 1)/(company!.companyCulture!.Votes + 1)
+        //     company!.companyCulture!.CulturePercent = ((company!.companyCulture!.CulturePercent) * (company!.companyCulture!.Votes) + 1)/(company!.companyCulture!.Votes + 1)
+        var newCulture: Double = Double((company!.companyCulture!.CulturePercent) * (company!.companyCulture!.Votes) + 100)
         company!.companyCulture!.Votes += 1
+        company!.companyCulture!.CulturePercent = Int(round(newCulture/Double(company!.companyCulture!.Votes)))
         
         self.workCount.text = "\(company!.companyCulture!.Votes) votes"
+        self.workCircleChart?.updateChartByCurrent(company!.companyCulture!.CulturePercent)
         self.workCircleChart?.updateChartByCurrent(company!.companyCulture!.CulturePercent)
     }
  
    
     @IBAction func onWorkUnlike(sender: UIButton) {
-        // Work-culture (N+1) = [N* Work-culture(N)-1]/(N+1)
-        company!.companyCulture!.CulturePercent = ((company!.companyCulture!.CulturePercent) * (company!.companyCulture!.Votes) - 1)/(company!.companyCulture!.Votes + 1)
-        company!.companyCulture!.Votes += 1
-        
-        self.workCount.text = "\(company!.companyCulture!.Votes) votes"
-        self.workCircleChart?.updateChartByCurrent(company!.companyCulture!.CulturePercent)
+    // Work-culture (N+1) = [N* Work-culture(N)-1]/(N+1)
+    //       company!.companyCulture!.CulturePercent = ((company!.companyCulture!.CulturePercent) * (company!.companyCulture!.Votes) - 1)/(company!.companyCulture!.Votes + 1)
+    //        company!.companyCulture!.Votes += 1
+    var newCulture: Double = Double((company!.companyCulture!.CulturePercent) * (company!.companyCulture!.Votes) - 100)
+    company!.companyCulture!.Votes += 1
+    company!.companyCulture!.CulturePercent = Int(round(newCulture/Double(company!.companyCulture!.Votes)))
+    
+    
+    self.workCount.text = "\(company!.companyCulture!.Votes) votes"
+    self.workCircleChart?.updateChartByCurrent(company!.companyCulture!.CulturePercent)
+    self.workCircleChart?.updateChartByCurrent(company!.companyCulture!.CulturePercent)
     }
     
     @IBAction func onValuationLike(sender: UIButton) {
